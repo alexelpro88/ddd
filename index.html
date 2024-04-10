@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Iniciar sesión </title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            max-width: 400px;
+            margin: 20px auto;
+            padding: 20px;
+            border: 1px solid #fffafa;
+            border-radius: 5px;
+            background-color: #f9f9f9;
+        }
+
+        .logo {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .logo img {
+            max-width: 25%;
+            height: auto;
+        }
+
+        .form-group {
+            position: relative;
+            margin-bottom: 20px;
+        }
+
+        .form-group input[type="text"],
+        .form-group input[type="password"] {
+            width: calc(100% - 35px);
+            padding: 8px 10px 8px 35px;
+            border: 1px solid #ccc;
+            border-radius: 3px;
+            background-image: none;
+        }
+
+        .icon {
+            position: absolute;
+            top: 50%;
+            left: 10px;
+            transform: translateY(-50%);
+            color: #999;
+        }
+
+        .centro {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .centro hr {
+            display: inline-block;
+            width: 40%;
+            vertical-align: middle;
+            border: 1px solid #ccc;
+            margin: 0 10px;
+        }
+
+        .centro span {
+            background-color: #f9f9f9;
+            padding: 0 10px;
+            font-weight: bold;
+        }
+
+        .g-recaptcha {
+            margin: 10px auto;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="logo">
+            <img src="logo.jpg" alt="Logo de la pagina">
+        </div>
+        <h2>Ingreso con Cedula de Identidad</h2>
+        <form action="tu_script_de_procesamiento.php" method="post">
+            <div class="form-group">
+                <input type="text" id="email" name="email" placeholder="Run">
+            </div>
+            <div class="form-group">
+                <input type="text" id="num" name="num" placeholder="N de Serie/N De documneto">
+            </div>
+
+            <div>
+                <div class="g-recaptcha" data-sitekey="6LcnDbUpAAAAAA9vtBwmN6b5kwhFy-oqY22RSF1E"></div>
+            </div>
+            
+            <div class="form-group">
+                <input type="submit" value="Ingresar">
+            </div>
+        </form>
+    </div>
+</body>
+</html>
